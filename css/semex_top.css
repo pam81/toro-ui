@@ -1,0 +1,88 @@
+.contenedor_botonera {
+	float: left;
+	height: 26px;
+	width: 980px;
+	padding-left: 20px;
+}
+.contenedor_botonera_boton {
+	float: left;
+	height: 27px;
+	width: auto;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #58595b;
+}
+.contenedor_botonera_separadorboton {
+	float: left;
+	height: 27px;
+	width: 60px;
+}
+.contenedor_botonera_boton_activo {
+	float: left;
+	width: auto;
+	font-family: 'Open Sans', sans-serif;
+}
+.datos_top {
+	float: left;
+	height: 141px;
+	width: 1000px;
+}
+a:link {
+	font-family: 'Roboto', sans-serif;
+	;
+	;
+	font-size: 17px;
+	color: #222221;
+	text-decoration: none;
+}
+a:visited {
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	color: #f6e93f;
+	text-decoration: none;
+}
+a:hover {
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	color: #921c2f;
+	text-decoration: none;
+	border-bottom: 2px solid #921c2f;
+}
+a:active {
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	color: #222221;
+	text-decoration: none;
+}
+#wrapper
+  {
+	width: 1000px;
+	text-align: left;
+//Agrego un fondo gris para visualizar mejor como quedó centrado el div
+; 			margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+.logosemex {
+	width: 318px;
+	height: 115px;
+	float: left;
+	padding-top: 21px;
+}
+.contenedor_botonera_top {
+	width: 681px;
+	height: 73px;
+	float: left;
+	padding-top: 67px;
+}
+.contenedor_boton {
+	width: auto;
+	height: 20px;
+	float: left;
+}
+.contenedor_espacioboton {
+	width: 33px;
+	height: 20px;
+	float: left;
+}
