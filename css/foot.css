@@ -1,0 +1,117 @@
+@charset "ISO-8859-1";
+#wrapper
+  {
+	width: 1000px;
+	text-align: left;
+//Agrego un fondo gris para visualizar mejor como quedó centrado el div
+; 			margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}.contenedor_carrusel {
+	width: 1000px;
+	height: 140px;
+	float: left;
+	padding-top: 20px;
+}
+.img_productos_foot {
+	height: 120px;
+	float: left;
+}
+.contenedor_mapa_datos {
+	width: 1000px;
+	height: 365px;
+	float: left;
+	padding-top: 25px;
+}
+.mapa {
+	width: 360px;
+	height: 350px;
+	padding-top: 20px;
+	float: left;
+}
+.logo_foot {
+	width: 322px;
+	height: 172px;
+	float: left;
+	padding-left: 36px;
+}
+.datos_foot {
+	width: 322px;
+	height: 98px;
+	float: left;
+	padding-left: 36px;
+	font-family: 'Roboto', sans-serif;
+	color: #FFFFFF;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: left;
+	font-weight: normal;
+	margin-bottom: 30px;
+}
+.redes_foot {
+	width: 322px;
+	height: 50px;
+	float: left;
+	padding-left: 36px;
+	text-align: left;
+	font-weight: normal;
+}
+.contenedor_medio_foot {
+	width: 360px;
+	height: 330px;
+	float: left;
+	padding-top: 20px;
+}
+.icono_redsocial {
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.espacio_icono_redsocial {
+	width: 9px;
+	height: 50px;
+	float: left;
+}
+.contenedor_botoneravertical1 {
+	width: 139px;
+	height: 330px;
+	float: left;
+	padding-top: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: #FFFFFF;
+	font-size: 12px;
+	line-height: 21px;
+}
+a.botonfoot:link {
+	font-family: 'Roboto', sans-serif;
+	color: #b0b0b0;
+	font-size: 12px;
+	text-align: left;
+	line-height: 21px;
+	text-decoration: none;
+}
+a.botonfoot:active {
+	font-family: 'Roboto', sans-serif;
+	color: #b0b0b0;
+	font-size: 12px;
+	text-align: left;
+	line-height: 21px;
+	text-decoration: none;
+}
+a.botonfoot:visited {
+	font-family: 'Roboto', sans-serif;
+	color: #b0b0b0;
+	font-size: 12px;
+	text-align: left;
+	line-height: 21px;
+	text-decoration: none;
+}
+a.botonfoot:hover {
+	font-family: 'Roboto', sans-serif;
+	color: #ffffff;
+	font-size: 12px;
+	text-align: left;
+	line-height: 21px;
+	text-decoration: none;
+}
