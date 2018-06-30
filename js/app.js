@@ -1,7 +1,7 @@
 'use strict';
 //var APIURL = 'http://localhost/personal/semex/semex/index.php';
-var APIURL = 'http://semex.com.ar.elserver.com/panel/index.php';
-angular.module('semexApp', [])
+var APIURL = 'http://www.semex.com.ar/panel/index.php';
+angular.module('semexApp', ['ngShadowbox'])
 .controller('ToroCtrl', function (CarneService, $sce, RazaService, OrigenService, $filter) {
 
         var ctrl = this;
@@ -9,8 +9,19 @@ angular.module('semexApp', [])
         var init = function () {
         	ctrl.toro = {};
         	ctrl.razas = [];
-        	ctrl.origenes = [];
-        	ctrl.toroid=1;
+          ctrl.origenes = [];
+          var params={};
+          window.location.search
+            .replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value) {
+              params[key] = value;
+            }
+          );
+         if (params.id){
+          ctrl.toroid = params.id;
+         }else{
+          ctrl.toroid = 1;
+          console.warn("No ID");
+         }
         	ctrl.getToroData(ctrl.toroid);
         	ctrl.getRazas();
         	ctrl.getOrigenes();

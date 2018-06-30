@@ -6,35 +6,19 @@
 <META NAME="Title" CONTENT="Semex Argentina">
 <META NAME="Author" CONTENT="estilonetto">
 <META NAME="Description" CONTENT="Computacion Gaming Electronica Soporte Tecnico">
-<META NAME="Keywords" CONTENT="computacion, computadoras, cpu, monitores, mouse, mother, placa de video, procesador, intel, amd, samgung, sony, apple, iphone, xbox, playstation, ps3, ps4, consolas, juegos, video juegos, accesorios, joystick, tablets, celulares, fundas, vidrio templado, cables, reparación, notebooks, impresoras, cartuchos, cartuchos originales, cartuchos alternativos, mataderos, alberdi, parlantes, wifi, bluetooth, kingston, pendrive, auriculares, genius, hp, epson">
+<META NAME="Keywords" CONTENT="computacion, computadoras, cpu, monitores, mouse, mother, placa de video, procesador, intel, amd, samgung, sony, apple, iphone, xbox, playstation, ps3, ps4, consolas, juegos, video juegos, accesorios, joystick, tablets, celulares, fundas, vidrio templado, cables, reparaciï¿½n, notebooks, impresoras, cartuchos, cartuchos originales, cartuchos alternativos, mataderos, alberdi, parlantes, wifi, bluetooth, kingston, pendrive, auriculares, genius, hp, epson">
 <META NAME="Language" CONTENT="Spanish">
 <META NAME="Revisit" CONTENT="1 day">
 <META NAME="Distribution" CONTENT="Global">
 <META NAME="Robots" CONTENT="All">
 <META NAME="revisit-after" CONTENT="7">
-<style type="text/css">
-<!--
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	background-image: url(imagenes/top_borderojo_toros.jpg);
-	background-repeat: repeat-x;
-	background-color: #FFFFFF;
-}
-.banneraltagama {
-	height: 85px;
-	width: 844px;
-	margin-right: auto;
-	margin-left: auto;
-}
--->
-</style>
+
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet" type='text/css'>
 <link href="css/semex_fichacarne.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="js/shadowbox/shadowbox.css">
 
 </head>
-<body bgcolor="#ffefcf" id="wrapper" ng-controller="ToroCtrl as tc" >
+<body  id="wrapper" ng-controller="ToroCtrl as tc" >
 <div class="contenedor_botonera_razas">
   <div class="contenedor_nombres_razas">
     
@@ -91,8 +75,9 @@ body {
   </div>
   <div class="contenedor_thumbs_galeria" ng-if="tc.toro.fotos">
     <div class="thumb_galeria" ng-repeat="foto in tc.toro.fotos">
-    	<a href="{{foto.image}}" rel="shadowbox" title="{{foto.title}}">
-    		<img ng-src="{{foto.image}}" width="100" height="70" alt=""/></a>
+    	<a ng-shadowbox="{{foto.image}}"  title="{{foto.title}}">
+        <img ng-src="{{foto.image}}" width="100" height="70" alt=""/>
+      </a>
 	</div>
   </div>
 </div>
@@ -100,7 +85,7 @@ body {
   <div class="contenedor_titulo_fotosvideos"><span class="txt_gris_normal18">FOTOS</span> <span class="txt_gris_normal18">| </span><span class="txt_bordo_bold18">VIDEOS</span></div>
   <div class="contenedor_thumbs_galeria">
     <div class="thumb_galeria" ng-repeat="video in tc.toro.videos">
-    	<a href="{{video.codigo}}" rel="shadowbox;width=1000;height=590" title="{{video.title}}">
+    	<a ng-shadowbox="{{video.codigo}}" ng-shadowbox-player="iframe" ng-shadowbox-height="590" ng-shadowbox-width="1000"  title="{{video.title}}">
     		<img ng-src="{{video.image}}" width="100" height="70" alt=""/></a>
 	</div>
   </div>
@@ -297,15 +282,18 @@ body {
   	</a>
   </div>
 </div>
+
+
+
+<script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="js/ng-shadowbox.min.js"></script>
 <script type="text/javascript">
 Shadowbox.init({
     language: 'en',
     players:  ['img', 'html', 'iframe', 'qt', 'wmp', 'swf', 'flv']
 });
-
 </script>
-<script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 
 </body>

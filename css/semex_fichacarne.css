@@ -1,4 +1,19 @@
 @charset "ISO-8859-1";
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	background-image: url(../imagenes/top_borderojo_toros.jpg);
+	background-repeat: repeat-x;
+	background-color: #FFFFFF;
+}
+.banneraltagama {
+	height: 85px;
+	width: 844px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .contenedor_botonera_razas {
 	width: 1000px;
 	min-height: 100px;
@@ -466,7 +481,7 @@ a.linkraza:hover {
   {
 	width: 1000px;
 	text-align: left;
-//Agrego un fondo gris para visualizar mejor como quedó centrado el div
+//Agrego un fondo gris para visualizar mejor como quedï¿½ centrado el div
 ; 			margin-top: 0;
 	margin-right: auto;
 	margin-bottom: 0;
