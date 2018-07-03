@@ -55,6 +55,16 @@ body {
 	width: 57px;
 	float: right;
 }
+.espacio_nombre_raza3 {
+	height: 46px;
+	color: #575756;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	line-height: 46px;
+	text-align: center;
+	width: 57px;
+	float: left;
+}
 .espacio_nombre_raza2 {
 	height: 46px;
 	color: #575756;
