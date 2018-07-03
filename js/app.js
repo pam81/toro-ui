@@ -41,6 +41,39 @@ angular.module('semexApp', ['ngShadowbox'])
         	});
         };
 
+        this.razaClass = function(name){
+          
+          switch(name.toUpperCase()){
+            case "ANGUS COLORADO" : 
+            case "ANGUS NEGRO":
+            case "BRAFORD":
+            case "BRAHMAN":
+            case "BRANGUS COLORADO":
+                      return true;
+                      break;
+            case "CHAROLAIS" : 
+            case "DROUGHMASTER":
+            case "FLECKVIEH":
+            case "HEREFORD":
+            case "LIMOUSIN":
+            case "SHORTHORN":
+            case "SIMMENTAL":
+            case "WAGYU":
+                      return false;
+                      break;
+            default: return true;
+          }
+        };
+
+        this.showSeparator = function(name){
+          if (name.toUpperCase() == 'BRANGUS NEGRO' || name.toUpperCase() == 'WAGYU'){
+            return false;
+          }else{
+            return true;
+          }
+
+        };
+
         this.getRazas = function(){
         	RazaService.getRazas().then(function(response){
         		ctrl.razas = response.data.resultados;

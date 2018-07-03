@@ -6,6 +6,8 @@ body {
 	background-image: url(../imagenes/top_borderojo_toros.jpg);
 	background-repeat: repeat-x;
 	background-color: #FFFFFF;
+	margin: 0;
+	padding: 0;
 }
 .banneraltagama {
 	height: 85px;
@@ -73,7 +75,7 @@ body {
 	line-height: 46px;
 	text-align: center;
 	width: 40px;
-	float: left;
+	float: right;
 }
 .contenedor_nombre_iconos_bandera {
 	width: 1000px;
@@ -491,8 +493,8 @@ a.linkraza:hover {
   {
 	width: 1000px;
 	text-align: left;
-//Agrego un fondo gris para visualizar mejor como qued� centrado el div
-; 			margin-top: 0;
+/*Agrego un fondo gris para visualizar mejor como qued� centrado el div;*/
+	margin-top: 0;
 	margin-right: auto;
 	margin-bottom: 0;
 	margin-left: auto;

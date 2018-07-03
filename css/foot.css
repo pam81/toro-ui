@@ -1,14 +1,24 @@
 @charset "ISO-8859-1";
-#wrapper
+.footer{
+	margin-left: 0px;
+	margin-top: 0px;
+	background-image: url(../imagenes/fondo_foot.jpg);
+	background-repeat: no-repeat;
+	background-color: #000;
+	float: left;
+	width: 100%;
+}
+.wrapper
   {
 	width: 1000px;
 	text-align: left;
-//Agrego un fondo gris para visualizar mejor como quedó centrado el div
-; 			margin-top: 0;
+/*Agrego un fondo gris para visualizar mejor como quedï¿½ centrado el div;*/
+	margin-top: 0;
 	margin-right: auto;
 	margin-bottom: 0;
 	margin-left: auto;
-}.contenedor_carrusel {
+}
+.contenedor_carrusel {
 	width: 1000px;
 	height: 140px;
 	float: left;
@@ -20,7 +30,7 @@
 }
 .contenedor_mapa_datos {
 	width: 1000px;
-	height: 365px;
+  padding-bottom: 10px;
 	float: left;
 	padding-top: 25px;
 }
@@ -114,4 +124,40 @@ a.botonfoot:hover {
 	text-align: left;
 	line-height: 21px;
 	text-decoration: none;
+}
+
+.slider {
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.slick-slide {
+	margin: 0px 20px;
+}
+
+.slick-slide img {
+	height: 120px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	color: black;
+}
+
+
+.slick-slide {
+	transition: all ease-in-out .3s;
+	opacity: 1;
+}
+
+.slick-active {
+	opacity: 1;
+}
+
+.slick-current {
+	opacity: 1;
+}
+.slider1 {        width: 50%;
+		margin: 100px auto;
 }
