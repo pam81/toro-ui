@@ -13,7 +13,6 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 1920px;
-	text-shadow: 0 -2px 1px;
 	-webkit-font-smoothing: antialiased;
   }
 
@@ -27,8 +26,7 @@ h2 {
   font: 16px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 40px;
   }
-
-#wrapper {
+#wrapperslide {
 	width: 100%;
   }
 
@@ -41,6 +39,7 @@ p,h3,h4,pre {
 .rslides {
 	margin-right: auto;
 	margin-left: auto;
+	border-bottom: 14px solid #921C2F;
   }
 
 #slider2,

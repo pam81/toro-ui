@@ -20,7 +20,6 @@ body {
 	width: 1000px;
 	min-height: 100px;
 	float: left;
-	padding-top: 14px;
 }
 .contenedor_nombres_razas {
 	width: 990px;
@@ -29,14 +28,15 @@ body {
 	background-color: #f5f5f5;
 	padding-left: 10px;
 	border-bottom: 1px solid #921c2f;
+	border-top: 14px solid #921c2f;
 }
 .contenedor_nombres_razas2 {
 	width: 990px;
-	height: 46px;
+	min-height: 46px;
 	float: left;
 	background-color: #f5f5f5;
 	padding-left: 10px;
-	border-bottom: 2px solid #921c2f;
+	border-bottom: 1px solid #921c2f;
 }
 .nombre_raza {
 	height: 46px;

@@ -9,11 +9,155 @@
 	margin-left: auto;
 	width: 1000px;
 }
-.contenedor_nombres_razas {
-	width: 990px;
-	min-height: 46px;
+.carne_contenedor_nombreraza {
+	width: 988px;
+	height: 78px;
 	float: left;
+	padding-left: 12px;
+	border-top: 1px solid #921c2f;
+}
+.carne_nombreraza {
+	font-family: 'Roboto', sans-serif;
+	color: #921c2f;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 78px;
+	text-align: left;
+	text-decoration: none;
+}
+.carne_listadodetorosdisponibles {
+	font-family: 'Roboto', sans-serif;
+	color: #868685;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 78px;
+	text-align: left;
+	text-decoration: none;
+}
+.carne_contenedor_rasgosdeps {
+	width: 988px;
+	height: 39px;
+	float: left;
+	background-color: #d9d9d8;
+	padding-left: 12px;
+}
+.carne_contenedor_rasgosdeps2 {
+	width: 988px;
+	height: 30px;
+	float: left;
+	padding-left: 12px;
+}
+.carne_contenedor_rasgosdeps3 {
+	width: 988px;
+	height: 30px;
+	float: left;
+	padding-left: 12px;
 	background-color: #f5f5f5;
-	padding-left: 10px;
-	border-bottom: 5px solid #FFFFFF;
+}
+.carne_contenedor_rasgosdeps_toros {
+	width: 313px;
+	height: 39px;
+	float: left;
+	color: #3e3e3d;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-size: 15px;
+	line-height: 39px;
+	text-align: left;
+}
+.carne_contenedor_rasgosdeps_toros2 {
+	width: 313px;
+	height: 30px;
+	float: left;
+	text-align: left;
+}
+.carne_contenedor_rasgosdeps_rasgos {
+	width: 60px;
+	height: 39px;
+	float: left;
+	color: #3e3e3d;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-size: 15px;
+	line-height: 39px;
+	text-align: center;
+}
+.carne_contenedor_rasgosdeps_rasgos2 {
+	width: 60px;
+	height: 30px;
+	float: left;
+	color: #3e3e3d;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-size: 13px;
+	line-height: 30px;
+	text-align: center;
+}
+.carne_contenedor_rasgosdeps_rasgostxt {
+	width: 56px;
+	height: 28px;
+	float: left;
+	background-color: #d9d9d8;
+	color: #3e3e3d;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-size: 15px;
+	line-height: 39px;
+	text-align: center;
+}
+.carne_contenedor_rasgosdeps_rasgosflechita {
+	width: 56px;
+	height: 5px;
+	float: left;
+	background-color: #d9d9d8;
+	font-style: normal;
+	text-align: center;
+}
+a.carnelinktoro:link {
+	font-family: 'Roboto', sans-serif;
+	color: #3e3e3d;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 30px;
+	text-align: left;
+	text-decoration: none;
+}
+a.carnelinktoro:active {
+	font-family: 'Roboto', sans-serif;
+	color: #3e3e3d;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 30px;
+	text-align: left;
+	text-decoration: none;
+}
+a.carnelinktoro:visited {
+	font-family: 'Roboto', sans-serif;
+	color: #3e3e3d;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 30px;
+	text-align: left;
+	text-decoration: none;
+}
+a.carnelinktoro:hover {
+	font-family: 'Roboto', sans-serif;
+	color: #921c2f;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 30px;
+	text-align: left;
+	text-decoration: none;
 }
