@@ -5,7 +5,7 @@
     <div class="contenedor_espacioboton"></div>
     <div class="contenedor_boton"><a href="#">LECHE</a></div>
     <div class="contenedor_espacioboton"></div>
-    <div class="contenedor_boton"><a href="#">CARNE</a></div>
+    <div class="contenedor_boton"><a href="carne.php">CARNE</a></div>
     <div class="contenedor_espacioboton"></div>
     <div class="contenedor_boton"><a href="#">SOLUCIONES</a></div>
     <div class="contenedor_espacioboton"></div>
