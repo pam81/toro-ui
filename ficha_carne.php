@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="semexApp">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>SEMEX ARGENTINA</title>
   <?php require_once("meta.html"); ?>
 </head>
@@ -274,20 +273,11 @@
       </div>
   </div> <!-- wrapper -->
 <?php require_once("footer.php"); ?>
+<?php require_once("scripts.html"); ?>
 
-<script type="text/javascript" src="js/angular.min.js"></script>
-<script type="text/javascript" src="js/shadowbox/shadowbox.js"></script>
-<script type="text/javascript" src="js/ng-shadowbox.min.js"></script>
-<script type="text/javascript">
-Shadowbox.init({
-    language: 'en',
-    players:  ['img', 'html', 'iframe', 'qt', 'wmp', 'swf', 'flv']
-});
-</script>
-<script type="text/javascript" src="js/app.js"></script>
 
 <!-- FOOTER -->
-<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+
 <script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     $(document).on('ready', function() {

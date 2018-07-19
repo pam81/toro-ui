@@ -1,6 +1,6 @@
 'use strict';
-//var APIURL = 'http://localhost/personal/semex/semex/index.php';
-var APIURL = 'http://www.semex.com.ar/panel/index.php';
+var APIURL = 'http://localhost/personal/semex/semex/index.php';
+//var APIURL = 'http://www.semex.com.ar/panel/index.php';
 angular.module('semexApp', ['ngShadowbox'])
 .controller('ToroCtrl', function (CarneService, $sce, RazaService, OrigenService, $filter) {
 
@@ -135,6 +135,48 @@ angular.module('semexApp', ['ngShadowbox'])
 
         init();
 })
+.controller('CarneCtrl', function (RazaService, CarneService) {
+    var ctrl= this;
+    var init = function(){
+      ctrl.razas = [];
+      ctrl.getRazas();
+    };
+
+    this.getRazas = function(){
+      RazaService.getRazas().then(function(response){
+        ctrl.razas = response.data.resultados;
+        angular.forEach(ctrl.razas, function(item,i){
+          ctrl.getTorosByRaza(item);
+        });
+      
+      }, function(failured){
+        console.warn("no se pudo obtener datos de la raza");
+      });
+    };
+
+    this.getTorosByRaza = function(raza){
+      CarneService.getByRaza(raza.id).then(function(response){
+        raza.toros = response.data.resultados;
+      },function(failured){
+        console.log("Error obtener toros");
+      });
+    };
+
+    this.getPruebas = function(toro){
+      CarneService.getPruebas(toro.id).then(function(response){
+        toro.pruebas = response.data;
+        
+      }, function(failured){
+        console.warn("no se pudo obtener datos de promedio de la  raza");
+      });
+    };
+
+    this.isPar = function(valor){
+	  	var tipo=(valor%2)? false: true;
+	  }
+
+    init();
+})
 .service('CarneService',function($http){
 	var carneService = {};
 
@@ -156,7 +198,17 @@ angular.module('semexApp', ['ngShadowbox'])
         };
 
         return $http(request);
-  	};
+    };
+    
+    carneService.getByRaza = function (id) {
+      var url = APIURL+'/api/toro/raza/'+id;
+      var request = {
+        method: 'GET',
+        url: url,
+      };
+
+      return $http(request);
+  };
 
   	carneService.getPruebas = function (id) {
         var url = APIURL+'/api/prueba/'+id;
