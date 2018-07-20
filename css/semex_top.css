@@ -26,7 +26,7 @@
 	float: left;
 	height: 141px;
 	width: 1000px;
-}
+} /* esto afecta a todo el sitio es una regla general */
 a:link {
 	font-family: 'Roboto', sans-serif;
 	;
@@ -58,8 +58,7 @@ a:active {
   {
 	width: 1000px;
 	text-align: left;
-//Agrego un fondo gris para visualizar mejor como quedó centrado el div
-; 			margin-top: 0;
+	margin-top: 0;
 	margin-right: auto;
 	margin-bottom: 0;
 	margin-left: auto;

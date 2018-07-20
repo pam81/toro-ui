@@ -10,15 +10,13 @@
   <?php require_once("header.php"); ?>
       <div class="contenedor_botonera_razas">
         <div class="contenedor_nombres_razas">
-          
           <div ng-repeat="r in tc.razas" class="nombre_raza">
             <a href="#" class="linkraza">{{r.name}}</a>
-            <div ng-class="tc.razaClass(r.name) ? 'espacio_nombre_raza' : 'espacio_nombre_raza2'" ng-if="tc.showSeparator(r.name)">|</div>
+            <div ng-class="tc.razaClass(r.name) ? 'espacio_nombre_raza' : 'espacio_nombre_raza2'" 
+                ng-if="tc.showSeparator(r.name)">|</div>
           </div>
-        
         </div>
-        
-      </div>
+      </div> <!-- contenedor_botonera_razas -->
       <div class="contenedor_nombre_iconos_bandera">
         <div class="toro_apodo">{{tc.toro.name}}</div>
         <div class="contenedor_iconos_bandera">
@@ -274,69 +272,6 @@
   </div> <!-- wrapper -->
 <?php require_once("footer.php"); ?>
 <?php require_once("scripts.html"); ?>
-
-
-<!-- FOOTER -->
-
-<script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-    $(document).on('ready', function() {
-      $(".vertical-center-4").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 4,
-        slidesToScroll: 2
-      });
-      $(".vertical-center-3").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-      $(".vertical-center-2").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 2,
-        slidesToScroll: 2
-      });
-      $(".vertical-center").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-      });
-      $(".vertical").slick({
-        dots: true,
-        vertical: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-      $(".regular").slick({
-        dots: false,
-        infinite: true,
-        slidesToShow: 6,
-        slidesToScroll: 1
-      });
-      $(".center").slick({
-        dots: false,
-        infinite: true,
-        centerMode: true,
-        slidesToShow: 6,
-        slidesToScroll: 1
-      });
-      $(".variable").slick({
-        dots: true,
-        infinite: true,
-        variableWidth: true
-      });
-      $(".lazy").slick({
-        lazyLoad: 'ondemand', // ondemand progressive anticipated
-        infinite: true
-      });
-    });
-</script>
 
 </body>
 </html>

@@ -5,7 +5,10 @@
 <?php require_once("meta.html"); ?>
 
 </head>
-<body class="carne"  ng-controller="CarneCtrl as cc" >
+<body  ng-controller="CarneCtrl as cc" >
+<div id="wrapper">
+  <?php require_once("header.php"); ?>
+</div>
 <div id="wrapperslide">
   <!-- Slideshow 1 -->
   <ul class="rslides" id="slider1">
@@ -14,13 +17,21 @@
     </ul>
 </div>
 <div id="wrappercarne">
-  <div class="contenedor_nombres_razas2"></div>
+  <div class="contenedor_botonera_razas" ng-controller="ToroCtrl as tc">
+    <div class="contenedor_nombres_razas">
+      <div ng-repeat="r in tc.razas" class="nombre_raza">
+        <a href="#" class="linkraza">{{r.name}}</a>
+        <div ng-class="tc.razaClass(r.name) ? 'espacio_nombre_raza' : 'espacio_nombre_raza2'" 
+            ng-if="tc.showSeparator(r.name)">|</div>
+      </div>
+    </div>
+  </div> <!-- contenedor_botonera_razas -->
   
-  <div ng-repeat="r in cc.razas">
+  <div class="listado_toros" ng-repeat="r in cc.razas">
     <div class="carne_contenedor_nombreraza">
       <span class="carne_nombreraza">{{r.name}} .</span> 
       <span class="carne_listadodetorosdisponibles">LISTADO DE TOROS DISPONBILES</span>
-    </div>
+    </div> <!-- carne_contenedor_nombreraza -->
   
     <div class="carne_contenedor_rasgosdeps">
       <div class="carne_contenedor_rasgosdeps_toros">TORO</div>
@@ -68,25 +79,28 @@
         <div class="carne_contenedor_rasgosdeps_rasgostxt">DOC</div>
         <div class="carne_contenedor_rasgosdeps_rasgosflechita"><img src="imagenes/flechita.png" width="5" height="5" alt=""/></div>
       </div>
-    </div>
+    </div> <!-- carne_contenedor_rasgosdeps -->
 
-    <div class="carne_contenedor_rasgosdeps2" ng-if="r.toros" ng-repeat="toro in r.toros ">
-      <div class="carne_contenedor_rasgosdeps_toros2">
-        <a href="ficha_carne.php?id={{toro.id}}" class="carnelinktoro">{{toro.name}}</a>
-      </div>
-      <div class="carne_contenedor_rasgosdeps_rasgos2" >{{toro.pruebas.dep_fp}}</div>
-      <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_pn}}</div>
-      <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_pd}}</div>
-      <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_pf}}</div>
-      <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_leche}}</div>
-      <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_cm}}</div>
-      <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_gd}}</div>
-      <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_marm}}</div>
-      <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_aob}}</div>
-      <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_ce}}</div>
-      <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_doc}}</div>
-    </div>
-</div>
+    <div class="carne_contenedor_rasgosdeps2" 
+          ng-if="r.toros" 
+          ng-repeat="toro in r.toros ">
+        <div class="carne_contenedor_rasgosdeps_toros2">
+          <a href="ficha_carne.php?id={{toro.id}}" class="carnelinktoro">{{toro.name}}</a>
+        </div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2" >{{toro.pruebas.dep_fp}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_pn}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_pd}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_pf}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_leche}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_cm}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_gd}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_marm}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_aob}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_ce}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_doc}}</div>
+    </div> <!-- carne_contenedor_rasgosdeps2 -->
+  </div> <!-- listado_toros -->
+</div> <!--- wrapercarne -->
 
 <?php require_once("scripts.html"); ?>
 
@@ -132,5 +146,6 @@
 
     });
   </script>
+  <?php require_once("footer.php"); ?>
 </body>
 </html>

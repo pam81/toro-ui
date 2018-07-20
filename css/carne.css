@@ -1,11 +1,6 @@
 @charset "ISO-8859-1";
 
-body.carne {
-	margin-left: 0px;
-	margin-top: 0px;
-	background-image: url();
-	background-color: #FFFFFF;
-}
+
 
 
 #wrappercarne
@@ -168,4 +163,9 @@ a.carnelinktoro:hover {
 	text-align: left;
 	text-decoration: none;
 	border-bottom:none;
+}
+.listado_toros{
+	margin-bottom: 40px;
+	float: left;
+	width: 100%;
 }
