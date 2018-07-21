@@ -27,28 +27,26 @@
 	height: 141px;
 	width: 1000px;
 } /* esto afecta a todo el sitio es una regla general */
-a:link {
+a.botoneratop:link {
 	font-family: 'Roboto', sans-serif;
-	;
-	;
 	font-size: 17px;
 	color: #222221;
 	text-decoration: none;
 }
-a:visited {
+a.botoneratop:visited {
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
-	color: #f6e93f;
+	color: #222221;
 	text-decoration: none;
 }
-a:hover {
+a.botoneratop:hover {
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	color: #921c2f;
 	text-decoration: none;
 	border-bottom: 2px solid #921c2f;
 }
-a:active {
+a.botoneratop:active {
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	color: #222221;

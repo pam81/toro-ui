@@ -88,16 +88,16 @@
           <a href="ficha_carne.php?id={{toro.id}}" class="carnelinktoro">{{toro.name}}</a>
         </div>
         <div class="carne_contenedor_rasgosdeps_rasgos2" >{{toro.pruebas.dep_fp}}</div>
-        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_pn}}</div>
-        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_pd}}</div>
-        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_pf}}</div>
-        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_leche}}</div>
-        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_cm}}</div>
-        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_gd}}</div>
-        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_marm}}</div>
-        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_aob}}</div>
-        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_ce}}</div>
-        <div class="carne_contenedor_rasgosdeps_rasgos2">{{tc.toro.pruebas.dep_doc}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{toro.pruebas.dep_pn}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{toro.pruebas.dep_pd}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{toro.pruebas.dep_pf}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{toro.pruebas.dep_leche}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{toro.pruebas.dep_cm}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{toro.pruebas.dep_gd}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{toro.pruebas.dep_marm}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{toro.pruebas.dep_aob}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{toro.pruebas.dep_ce}}</div>
+        <div class="carne_contenedor_rasgosdeps_rasgos2">{{toro.pruebas.dep_doc}}</div>
     </div> <!-- carne_contenedor_rasgosdeps2 -->
   </div> <!-- listado_toros -->
 </div> <!--- wrapercarne -->
