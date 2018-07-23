@@ -20,7 +20,7 @@
   <div class="contenedor_botonera_razas" ng-controller="ToroCtrl as tc">
     <div class="contenedor_nombres_razas">
       <div ng-repeat="r in tc.razas" class="nombre_raza">
-        <a href="#" class="linkraza">{{r.name}}</a>
+        <a href="raza.php?id={{r.id}}" class="linkraza">{{r.name}}</a>
         <div ng-class="tc.razaClass(r.name) ? 'espacio_nombre_raza' : 'espacio_nombre_raza2'" 
             ng-if="tc.showSeparator(r.name)">|</div>
       </div>
@@ -104,7 +104,7 @@
 
 <?php require_once("scripts.html"); ?>
 
-<script src="slide/responsiveslides.min.js"></script>
+
 <script>
     // You can also use "$(window).load(function() {"
     $(function () {

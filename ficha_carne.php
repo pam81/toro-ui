@@ -11,14 +11,14 @@
       <div class="contenedor_botonera_razas">
         <div class="contenedor_nombres_razas">
           <div ng-repeat="r in tc.razas" class="nombre_raza">
-            <a href="#" class="linkraza">{{r.name}}</a>
+            <a href="raza.php?id={{r.id}}" class="linkraza">{{r.name}}</a>
             <div ng-class="tc.razaClass(r.name) ? 'espacio_nombre_raza' : 'espacio_nombre_raza2'" 
                 ng-if="tc.showSeparator(r.name)">|</div>
           </div>
         </div>
       </div> <!-- contenedor_botonera_razas -->
       <div class="contenedor_nombre_iconos_bandera">
-        <div class="toro_apodo">{{tc.toro.name}}</div>
+        <div class="toro_apodo" ng-if="tc.toro">{{tc.toro.name}}</div>
         <div class="contenedor_iconos_bandera">
           <div class="toro_bandera" ng-if="tc.toro.origenid && tc.origenes.length > 0">
             <img ng-src="{{tc.getFlag(tc.toro.origenid)}}" width="70" height="37" alt=""/>
@@ -50,11 +50,11 @@
         </div>
       </div>
       <div class="contenedor_codigo_nombrecompleto">
-        <div class="toro_codigo">{{tc.toro.codigo}}</div>
-        <div class="toro_nombrecompleto">{{tc.toro.name_all}}</div>
+        <div class="toro_codigo" ng-if="tc.toro.codigo" >{{tc.toro.codigo}}</div>
+        <div class="toro_nombrecompleto" ng-if="tc.toro.name_all" >{{tc.toro.name_all}}</div>
       </div>
       <div class="toro_foto">
-        <img ng-src="{{tc.toro.image}}" width="1000" height="695" alt=""/>
+        <img ng-if="tc.toro.image" ng-src="{{tc.toro.image}}" width="1000" height="695" alt=""/>
       </div>
       <div class="contenedor_galerias">
         <div class="contenedor_titulo_fotosvideos"><span class="txt_bordo_bold18">FOTOS</span> 
