@@ -18,7 +18,7 @@
         </div>
       </div> <!-- contenedor_botonera_razas -->
       <div class="contenedor_nombre_iconos_bandera">
-        <div class="toro_apodo" ng-if="tc.toro">{{tc.toro.name}}</div>
+        <div class="toro_apodo" ng-if="tc.toro.name">{{tc.toro.name}}</div>
         <div class="contenedor_iconos_bandera">
           <div class="toro_bandera" ng-if="tc.toro.origenid && tc.origenes.length > 0">
             <img ng-src="{{tc.getFlag(tc.toro.origenid)}}" width="70" height="37" alt=""/>

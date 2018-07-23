@@ -1,6 +1,6 @@
 'use strict';
-var APIURL = 'http://localhost/personal/semex/semex/index.php';
-//var APIURL = 'http://www.semex.com.ar/panel/index.php';
+//var APIURL = 'http://localhost/personal/semex/semex/index.php';
+var APIURL = 'http://www.semex.com.ar/panel/index.php';
 angular.module('semexApp', ['ngShadowbox'])
 .controller('ToroCtrl', function (CarneService, $sce, RazaService, OrigenService, $filter) {
 
@@ -32,7 +32,7 @@ angular.module('semexApp', ['ngShadowbox'])
         		
         		ctrl.toro = response.data;
         		ctrl.toro.texto = $sce.trustAsHtml(ctrl.toro.texto);
-        		ctrl.getPromedio(ctrl.toro.razaid);
+        		ctrl.getPromedio(ctrl.toro.razaid, ctrl.toro.origenid);
         		ctrl.getPruebas(id);
         		ctrl.getFotos(id);
         		ctrl.getVideos(id);
@@ -83,8 +83,8 @@ angular.module('semexApp', ['ngShadowbox'])
         	});
         };
 
-        this.getPromedio = function(razaid){
-        	RazaService.getPromedio(razaid).then(function(response){
+        this.getPromedio = function(razaid, origenid){
+        	RazaService.getPromedio(razaid, origenid).then(function(response){
         		ctrl.toro.promedio = response.data;
         	
         	}, function(failured){
@@ -311,8 +311,8 @@ angular.module('semexApp', ['ngShadowbox'])
         return $http(request);
       };
 
-  	razaService.getPromedio = function (id) {
-        var url = APIURL+'/api/promedio/'+id;
+  	razaService.getPromedio = function (raza,origen) {
+        var url = APIURL+'/api/promedio/'+raza+'/'+origen;
         var request = {
           method: 'GET',
           url: url,
