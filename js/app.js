@@ -1,6 +1,6 @@
 'use strict';
-var APIURL = 'http://localhost/personal/semex/semex/index.php';
-//var APIURL = 'http://www.semex.com.ar/panel/index.php';
+//var APIURL = 'http://localhost/personal/semex/semex/index.php';
+var APIURL = 'http://www.semex.com.ar/panel/index.php';
 angular.module('semexApp', ['ngShadowbox'])
 .controller('ToroCtrl', function (CarneService, $sce, RazaService, OrigenService, $filter) {
 
@@ -9,19 +9,19 @@ angular.module('semexApp', ['ngShadowbox'])
         var init = function () {
         	ctrl.toro = {};
         	ctrl.razas = [];
-          ctrl.origenes = [];
-          var params={};
-          window.location.search
-            .replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value) {
-              params[key] = value;
-            }
-          );
-         if (params.id){
-          ctrl.toroid = params.id;
-         }else{
-          ctrl.toroid = 1;
-          console.warn("No ID");
-         }
+          	ctrl.origenes = [];
+          	var params={};
+	          window.location.search
+	            .replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value) {
+	              params[key] = value;
+	            }
+	          );
+	         if (params.id){
+	          ctrl.toroid = params.id;
+	         }else{
+	          ctrl.toroid = 1;
+	          console.warn("No ID");
+	         }
         	ctrl.getToroData(ctrl.toroid);
         	ctrl.getRazas();
         	ctrl.getOrigenes();
@@ -32,7 +32,7 @@ angular.module('semexApp', ['ngShadowbox'])
         		
         		ctrl.toro = response.data;
         		ctrl.toro.texto = $sce.trustAsHtml(ctrl.toro.texto);
-        		ctrl.getPromedio(ctrl.toro.razaid);
+        		ctrl.getPromedio(ctrl.toro.razaid, ctrl.toro.origenid);
         		ctrl.getPruebas(id);
         		ctrl.getFotos(id);
         		ctrl.getVideos(id);
@@ -83,8 +83,8 @@ angular.module('semexApp', ['ngShadowbox'])
         	});
         };
 
-        this.getPromedio = function(razaid){
-        	RazaService.getPromedio(razaid).then(function(response){
+        this.getPromedio = function(razaid, origenid){
+        	RazaService.getPromedio(razaid, origenid).then(function(response){
         		ctrl.toro.promedio = response.data;
         	
         	}, function(failured){
@@ -177,6 +177,51 @@ angular.module('semexApp', ['ngShadowbox'])
 
     init();
 })
+.controller('RazaCtrl', function (RazaService, CarneService) {
+    var ctrl= this;
+    var init = function(){
+      ctrl.toros = [];
+      ctrl.raza = {};
+      
+      var params={};
+      window.location.search
+        .replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value) {
+          params[key] = value;
+        }
+      );
+     ctrl.razaid = 0;
+     if (params.id){
+      ctrl.razaid = params.id;
+      ctrl.getTorosByRaza();
+      ctrl.getRaza();
+     }else{
+      console.warn("No ID");
+     }
+      
+    };
+
+    this.getRaza = function(){
+    	RazaService.getRaza(ctrl.razaid).then(function(response){
+    		ctrl.raza = response.data;
+    	
+    	}, function(failured){
+    		console.warn("no se pudo obtener datos de la raza");
+    	});
+    };
+    
+
+    this.getTorosByRaza = function(){
+      CarneService.getByRaza(ctrl.razaid).then(function(response){
+        ctrl.toros = response.data.resultados;
+      },function(failured){
+        console.log("Error obtener toros");
+      });
+    };
+
+    
+
+    init();
+})
 .service('CarneService',function($http){
 	var carneService = {};
 
@@ -246,7 +291,7 @@ angular.module('semexApp', ['ngShadowbox'])
 .service('RazaService',function($http){
 	var razaService = {};
 
-	razaService.getRazas = function (id) {
+	razaService.getRazas = function () {
         var url = APIURL+'/api/raza';
         var request = {
           method: 'GET',
@@ -256,8 +301,18 @@ angular.module('semexApp', ['ngShadowbox'])
         return $http(request);
       };
 
-  	razaService.getPromedio = function (id) {
-        var url = APIURL+'/api/promedio/'+id;
+    razaService.getRaza = function (id) {
+        var url = APIURL+'/api/raza/'+id;
+        var request = {
+          method: 'GET',
+          url: url,
+        };
+
+        return $http(request);
+      };
+
+  	razaService.getPromedio = function (raza,origen) {
+        var url = APIURL+'/api/promedio/'+raza+'/'+origen;
         var request = {
           method: 'GET',
           url: url,
