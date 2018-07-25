@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="semexApp">
 <head>
+  <title>SEMEX ARGENTINA</title>
   <?php require_once("meta.html"); ?>
   <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
