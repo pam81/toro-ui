@@ -222,6 +222,27 @@ angular.module('semexApp', ['ngShadowbox'])
 
     init();
 })
+.controller('HomeCtrl', function (RazaService, CarneService) {
+  var ctrl= this;
+  var init = function(){
+    ctrl.section = {
+      noticias: true,
+      leche: false,
+      carne: false,
+      video: false
+    };
+   
+  };
+
+  this.changeSection = function(option){
+    ctrl.section.noticias = false;
+    ctrl.section.leche = false;
+    ctrl.section.carne = false;
+    ctrl.section.video = false;
+    ctrl.section[option]= true;
+  };
+  init();
+})
 .service('CarneService',function($http){
 	var carneService = {};
 
