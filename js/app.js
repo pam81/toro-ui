@@ -1,7 +1,7 @@
 'use strict';
 //var APIURL = 'http://localhost/personal/semex/semex/index.php';
 var APIURL = 'http://www.semex.com.ar/panel/index.php';
-angular.module('semexApp', ['ngShadowbox'])
+angular.module('semexApp', ['ngShadowbox','ngSanitize'])
 .controller('ToroCtrl', function (CarneService, $sce, RazaService, OrigenService, $filter) {
 
         var ctrl = this;

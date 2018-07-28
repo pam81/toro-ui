@@ -11,14 +11,14 @@
       <div class="contenedor_botonera_razas">
         <div class="contenedor_nombres_razas">
           <div ng-repeat="r in tc.razas" class="nombre_raza">
-            <a href="raza.php?id={{r.id}}" class="linkraza">{{r.name}}</a>
+            <a href="raza.php?id={{r.id}}" class="linkraza" ng-bind-html="r.name"></a>
             <div ng-class="tc.razaClass(r.name) ? 'espacio_nombre_raza' : 'espacio_nombre_raza2'" 
                 ng-if="tc.showSeparator(r.name)">|</div>
           </div>
         </div>
       </div> <!-- contenedor_botonera_razas -->
       <div class="contenedor_nombre_iconos_bandera">
-        <div class="toro_apodo" ng-if="tc.toro.name">{{tc.toro.name}}</div>
+        <div class="toro_apodo" ng-if="tc.toro.name" ng-bind-html="tc.toro.name"></div>
         <div class="contenedor_iconos_bandera">
           <div class="toro_bandera" ng-if="tc.toro.origenid && tc.origenes.length > 0">
             <img ng-src="{{tc.getFlag(tc.toro.origenid)}}" width="70" height="37" alt=""/>
@@ -50,8 +50,8 @@
         </div>
       </div>
       <div class="contenedor_codigo_nombrecompleto">
-        <div class="toro_codigo" ng-if="tc.toro.codigo" >{{tc.toro.codigo}}</div>
-        <div class="toro_nombrecompleto" ng-if="tc.toro.name_all" >{{tc.toro.name_all}}</div>
+        <div class="toro_codigo" ng-if="tc.toro.codigo" ng-bind-html="tc.toro.codigo"></div>
+        <div class="toro_nombrecompleto" ng-if="tc.toro.name_all" ng-bind-html="tc.toro.name_all" ></div>
       </div>
       <div class="toro_foto">
         <img ng-if="tc.toro.image" ng-src="{{tc.toro.image}}" width="1000" height="695" alt=""/>
@@ -82,14 +82,14 @@
           <div class="linea_pedigri"><img src="imagenes/linea_pedigri.png" width="10" height="75" alt=""/></div>
           <div class="contenedor_padres_pedigri">
             <div class="contenedor_padres_pedigri_linea1">
-              <div class="pedigri_abuelos">{{tc.toro.abuelo_p}}</div>
-              <div class="pedigri_padres">{{tc.toro.padre}}</div>
-              <div class="pedigri_abuelos">{{tc.toro.abuela_p}}</div>
+              <div class="pedigri_abuelos" ng-bind-html="tc.toro.abuelo_p"></div>
+              <div class="pedigri_padres" ng-bind-html="tc.toro.padre"></div>
+              <div class="pedigri_abuelos" ng-bind-html="tc.toro.abuela_p"></div>
             </div>
             <div class="contenedor_padres_pedigri_linea2">
-              <div class="pedigri_abuelos">{{tc.toro.abuelo_m}}</div>
-              <div class="pedigri_padres">{{tc.toro.madre}}</div>
-              <div class="pedigri_abuelos">{{tc.toro.abuela_m}}</div>
+              <div class="pedigri_abuelos" ng-bind-html="tc.toro.abuelo_m"></div>
+              <div class="pedigri_padres" ng-bind-html="tc.toro.madre"></div>
+              <div class="pedigri_abuelos" ng-bind-html="tc.toro.abuela_m"></div>
             </div>
           </div>
         </div>

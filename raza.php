@@ -19,19 +19,20 @@
    <div class="contenedor_botonera_razas" ng-controller="ToroCtrl as tc">
     <div class="contenedor_nombres_razas">
       <div ng-repeat="r in tc.razas" class="nombre_raza">
-        <a href="raza.php?id={{r.id}}" class="linkraza">{{r.name}}</a>
+        <a href="raza.php?id={{r.id}}" class="linkraza" ng-bind-html="r.name"></a>
         <div ng-class="tc.razaClass(r.name) ? 'espacio_nombre_raza' : 'espacio_nombre_raza2'" 
             ng-if="tc.showSeparator(r.name)">|</div>
       </div>
     </div>
   </div> <!-- contenedor_botonera_razas -->
-  <div class="carne_contenedor_nombreraza"><span ng-if="rc.raza.name" class="carne_nombreraza">{{rc.raza.name}}</span></div>
+  <div class="carne_contenedor_nombreraza"><span ng-if="rc.raza.name" class="carne_nombreraza" 
+        ng-bind-html="rc.raza.name"></span></div>
   
   <div class="carne_raza_contenedor_fotonombre_toro" ng-repeat="toro in rc.toros">
     <div class="carne_raza_contenedor_fototoro">
       <a href="ficha_carne.php?id={{toro.id}}"><img ng-if="toro.image" ng-src="{{toro.image}}" width="190" height="132" alt=""/></a>
     </div>
-    <div class="carne_raza_contenedor_nombretoro">{{toro.name}}</div>
+    <div class="carne_raza_contenedor_nombretoro" ng-bind-html="toro.name"></div>
   </div>
   
   

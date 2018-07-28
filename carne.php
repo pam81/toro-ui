@@ -20,7 +20,7 @@
   <div class="contenedor_botonera_razas" ng-controller="ToroCtrl as tc">
     <div class="contenedor_nombres_razas">
       <div ng-repeat="r in tc.razas" class="nombre_raza">
-        <a href="raza.php?id={{r.id}}" class="linkraza">{{r.name}}</a>
+        <a href="raza.php?id={{r.id}}" class="linkraza" ng-bind-html="r.name"></a>
         <div ng-class="tc.razaClass(r.name) ? 'espacio_nombre_raza' : 'espacio_nombre_raza2'" 
             ng-if="tc.showSeparator(r.name)">|</div>
       </div>
@@ -29,7 +29,7 @@
   
   <div class="listado_toros" ng-repeat="r in cc.razas">
     <div class="carne_contenedor_nombreraza">
-      <span class="carne_nombreraza">{{r.name}} .</span> 
+      <span class="carne_nombreraza"> <span ng-bind-html="r.name"></span> .</span> 
       <span class="carne_listadodetorosdisponibles">LISTADO DE TOROS DISPONBILES</span>
     </div> <!-- carne_contenedor_nombreraza -->
   
@@ -85,7 +85,7 @@
           ng-if="r.toros" 
           ng-repeat="toro in r.toros ">
         <div class="carne_contenedor_rasgosdeps_toros2">
-          <a href="ficha_carne.php?id={{toro.id}}" class="carnelinktoro">{{toro.name}}</a>
+          <a href="ficha_carne.php?id={{toro.id}}" class="carnelinktoro" ng-bind-html="toro.name"></a>
         </div>
         <div class="carne_contenedor_rasgosdeps_rasgos2" >{{toro.pruebas.dep_fp}}</div>
         <div class="carne_contenedor_rasgosdeps_rasgos2">{{toro.pruebas.dep_pn}}</div>
