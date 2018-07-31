@@ -56,27 +56,26 @@
       <div class="toro_foto">
         <img ng-if="tc.toro.image" ng-src="{{tc.toro.image}}" width="1000" height="695" alt=""/>
       </div>
-      <div class="contenedor_galerias">
-        <div class="contenedor_titulo_fotosvideos"><span class="txt_bordo_bold18">FOTOS</span> 
-          <span class="txt_gris_normal18">| VIDEOS</span>
+      <div class="contenedor_galerias" ng-if="tc.toro.fotos || tc.toro.videos">
+        <div class="contenedor_titulo_fotosvideos">
+          <span ng-click="tc.section.foto = true" class="section"
+                ng-class=" tc.section.foto ? 'txt_bordo_bold18' : 'txt_gris_normal18'">FOTOS</span> 
+          <span ng-click="tc.section.foto = false" class="section"
+                ng-class=" !tc.section.foto ? 'txt_bordo_bold18' : 'txt_gris_normal18'">| VIDEOS</span>
         </div>
-        <div class="contenedor_thumbs_galeria" ng-if="tc.toro.fotos">
-          <div class="thumb_galeria" ng-repeat="foto in tc.toro.fotos">
+        <div class="contenedor_thumbs_galeria" >
+          <div ng-if="tc.section.foto" class="thumb_galeria" ng-repeat="foto in tc.toro.fotos">
             <a ng-shadowbox="{{foto.image}}"  title="{{foto.title}}">
               <img ng-src="{{foto.image}}" width="100" height="70" alt=""/>
             </a>
-        </div>
-        </div>
-      </div>
-      <div class="contenedor_galerias" ng-if="tc.toro.videos">
-        <div class="contenedor_titulo_fotosvideos"><span class="txt_gris_normal18">FOTOS</span> <span class="txt_gris_normal18">| </span><span class="txt_bordo_bold18">VIDEOS</span></div>
-        <div class="contenedor_thumbs_galeria">
-          <div class="thumb_galeria" ng-repeat="video in tc.toro.videos">
+          </div>
+          <div ng-if="!tc.section.foto" class="thumb_galeria" ng-repeat="video in tc.toro.videos">
             <a ng-shadowbox="{{video.codigo}}" ng-shadowbox-player="iframe" ng-shadowbox-height="590" ng-shadowbox-width="1000"  title="{{video.title}}">
               <img ng-src="{{video.image}}" width="100" height="70" alt=""/></a>
-        </div>
+          </div>
         </div>
       </div>
+    
       <div class="contenedor_pedigri_datos">
         <div class="contenedor_pedigri">
           <div class="linea_pedigri"><img src="imagenes/linea_pedigri.png" width="10" height="75" alt=""/></div>

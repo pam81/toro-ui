@@ -163,6 +163,9 @@ body {
 	height: 20px;
 	float: left;
 }
+.contenedor_titulo_fotosvideos span.section:hover{
+	cursor: pointer;
+}
 .txt_bordo_bold18 {
 	font-family: 'Roboto', sans-serif;
 	color: #921e30;

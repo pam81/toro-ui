@@ -9,6 +9,10 @@ angular.module('semexApp', ['ngShadowbox','ngSanitize'])
         var init = function () {
         	ctrl.toro = {};
         	ctrl.razas = [];
+          ctrl.section ={
+            foto : true
+          };
+
           	ctrl.origenes = [];
           	var params={};
 	          window.location.search
