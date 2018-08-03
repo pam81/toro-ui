@@ -7,8 +7,10 @@
 <div id="wrapper">
   <?php require_once("header.php"); ?>
 </div>
-<div class="contenedor_todoequipo">
- <object data="equipo_central.html" style="width:100%; height:700px"></object>
+<div class="div_contenedor_equipo">
+	<div class="contenedor_todoequipo">
+	 <object data="equipo_central.html" style="width:100%; height:700px"></object>
+	</div>
 </div>
 
 <?php require_once("scripts.html"); ?>

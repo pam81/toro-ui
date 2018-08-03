@@ -1,18 +1,6 @@
-#wrapper_equipo
-  {
-/*	width: 1000px;
-	text-align: left;
-	/*Agrego un fondo gris para visualizar mejor como quedï¿½ centrado el div;*/
-/*	margin-top: 0;
-	margin-right: auto;
-	margin-bottom: 0;
-	margin-left: auto;
-	background-color: #58595b;*/
-	margin-top: 0;
-	margin-right: auto;
-	margin-bottom: 0;
-	margin-left: auto;
+.div_contenedor_equipo{
 	width: 100%;
+	background-color: #58595b;
 }
 .contenedor_todoequipo {
 	width: 1000px;
