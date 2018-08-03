@@ -23,7 +23,7 @@
 	font-family: 'Open Sans', sans-serif;
 }
 .datos_top {
-	float: left;
+	/*float: left;*/
 	height: 141px;
 	width: 1000px;
 } /* esto afecta a todo el sitio es una regla general */
