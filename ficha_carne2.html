@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html ng-app="semexApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEMEX ARGENTINA</title>
+<META NAME="Title" CONTENT="Semex Argentina">
+<META NAME="Author" CONTENT="estilonetto">
+<META NAME="Description" CONTENT="Computacion Gaming Electronica Soporte Tecnico">
+<META NAME="Keywords" CONTENT="computacion, computadoras, cpu, monitores, mouse, mother, placa de video, procesador, intel, amd, samgung, sony, apple, iphone, xbox, playstation, ps3, ps4, consolas, juegos, video juegos, accesorios, joystick, tablets, celulares, fundas, vidrio templado, cables, reparaci�n, notebooks, impresoras, cartuchos, cartuchos originales, cartuchos alternativos, mataderos, alberdi, parlantes, wifi, bluetooth, kingston, pendrive, auriculares, genius, hp, epson">
+<META NAME="Language" CONTENT="Spanish">
+<META NAME="Revisit" CONTENT="1 day">
+<META NAME="Distribution" CONTENT="Global">
+<META NAME="Robots" CONTENT="All">
+<META NAME="revisit-after" CONTENT="7">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet" type='text/css'>
+<link href="css/semex_fichacarne.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="js/shadowbox/shadowbox.css">
+
+</head>
+<body  id="wrapper" ng-controller="ToroCtrl as tc" >
+<div class="contenedor_botonera_razas">
+  <div class="contenedor_nombres_razas">
+    <div class="nombre_raza"><a href="#" class="linkraza">ANGUS COLORADO</a></div>
+    <div class="espacio_nombre_raza3">|</div>
+    <div class="nombre_raza"><a href="#" class="linkraza">ANGUS NEGRO</a></div>
+    <div class="espacio_nombre_raza3">|</div>
+    <div class="nombre_raza"><a href="#" class="linkraza">BRAFORD</a></div>
+    <div class="espacio_nombre_raza3">|</div>
+    <div class="nombre_raza"><a href="#" class="linkraza">BRAHMan</a></div>
+    <div class="espacio_nombre_raza3">|</div>
+    <div class="nombre_raza"><a href="#" class="linkraza">BRANGUS COLORADO</a></div>
+    <div class="espacio_nombre_raza3">|</div>
+    <div class="nombre_raza"><a href="#" class="linkraza">BRANGUS NEGRO</a></div>
+    <div class="nombre_raza"><a href="#" class="linkraza">CHAROLAIS</a></div>
+    <div class="espacio_nombre_raza2">|</div>
+    <div class="nombre_raza"><a href="#" class="linkraza">DROUGHMASTER</a></div>
+    <div class="espacio_nombre_raza2">|</div>
+    <div class="nombre_raza"><a href="#" class="linkraza">FLECKVIEH</a></div>
+    <div class="espacio_nombre_raza2">|</div>
+    <div class="nombre_raza"><a href="#" class="linkraza">HEREFORD</a></div>
+    <div class="espacio_nombre_raza2">|</div>
+    <div class="nombre_raza"><a href="#" class="linkraza">LIMOUSIN</a></div>
+    <div class="espacio_nombre_raza2">|</div>
+    <div class="nombre_raza"><a href="#" class="linkraza">SHORTHORN</a></div>
+    <div class="espacio_nombre_raza2">|</div>
+    <div class="nombre_raza"><a href="#" class="linkraza">SIMMENTAL</a></div>
+    <div class="espacio_nombre_raza2">|</div>
+    <div class="nombre_raza"><a href="#" class="linkraza">WAGYU</a></div>
+  </div>
+  
+</div>
+<div class="contenedor_nombre_iconos_bandera">
+  <div class="toro_apodo">{{tc.toro.name}}</div>
+  <div class="contenedor_iconos_bandera">
+    <div class="toro_bandera" ng-if="tc.toro.origenid && tc.origenes.length > 0">
+    	<img ng-src="{{tc.getFlag(tc.toro.origenid)}}" width="70" height="37" alt=""/>
+    </div>
+    <div class="toro_iconos" ng-if="tc.toro.maternal == 1" >
+    	<img  src="imagenes/icono_maternal.png" width="37" height="37" alt=""/>
+    </div>
+    <div class="toro_iconos" ng-if="tc.toro.carcasa == 1">
+    	<img src="imagenes/icono_carcasa.png" width="41" height="37" alt=""/>
+    </div>
+    <div class="toro_iconos" ng-if="tc.toro.performance == 1">
+    	<img src="imagenes/icono_performance.png" width="37" height="37" alt=""/>
+    </div>
+    <div class="toro_iconos" ng-if="tc.toro.ojo_bife == 1">
+    	<img src="imagenes/icono_aob.png" width="40" height="37" alt=""/>
+    </div>
+    <div class="toro_iconos" ng-if="tc.toro.fertilidad == 1">
+    	<img src="imagenes/icono_fertilidad.png" width="37" height="37" alt=""/>
+    </div>
+    <div class="toro_iconos" ng-if="tc.toro.eficiencia == 1">
+    	<img src="imagenes/icono_eficiencia.png" width="35" height="37" alt=""/>
+    </div>
+    <div class="toro_iconos" ng-if="tc.toro.marmolado == 1">
+    	<img src="imagenes/icono_marmolado.png" width="42" height="37" alt=""/>
+    </div>
+    <div class="toro_iconos" ng-if="tc.toro.fparto == 1">
+    	<img src="imagenes/icono_facdeparto.png" width="37" height="37" alt=""/>
+    </div>
+  </div>
+</div>
+<div class="contenedor_codigo_nombrecompleto">
+  <div class="toro_codigo">{{tc.toro.codigo}}</div>
+  <div class="toro_nombrecompleto">{{tc.toro.name_all}}</div>
+</div>
+<div class="toro_foto">
+	<img ng-src="{{tc.toro.image}}" width="1000" height="695" alt=""/>
+</div>
+<div class="contenedor_galerias">
+  <div class="contenedor_titulo_fotosvideos"><span class="txt_bordo_bold18">FOTOS</span> 
+  	<span class="txt_gris_normal18">| VIDEOS</span>
+  </div>
+  <div class="contenedor_thumbs_galeria" ng-if="tc.toro.fotos">
+    <div class="thumb_galeria" ng-repeat="foto in tc.toro.fotos">
+    	<a ng-shadowbox="{{foto.image}}"  title="{{foto.title}}">
+        <img ng-src="{{foto.image}}" width="100" height="70" alt=""/>
+      </a>
+	</div>
+  </div>
+</div>
+<div class="contenedor_galerias" ng-if="tc.toro.videos">
+  <div class="contenedor_titulo_fotosvideos"><span class="txt_gris_normal18">FOTOS</span> <span class="txt_gris_normal18">| </span><span class="txt_bordo_bold18">VIDEOS</span></div>
+  <div class="contenedor_thumbs_galeria">
+    <div class="thumb_galeria" ng-repeat="video in tc.toro.videos">
+    	<a ng-shadowbox="{{video.codigo}}" ng-shadowbox-player="iframe" ng-shadowbox-height="590" ng-shadowbox-width="1000"  title="{{video.title}}">
+    		<img ng-src="{{video.image}}" width="100" height="70" alt=""/></a>
+	</div>
+  </div>
+</div>
+<div class="contenedor_pedigri_datos">
+  <div class="contenedor_pedigri">
+    <div class="linea_pedigri"><img src="imagenes/linea_pedigri.png" width="10" height="75" alt=""/></div>
+    <div class="contenedor_padres_pedigri">
+      <div class="contenedor_padres_pedigri_linea1">
+        <div class="pedigri_abuelos">{{tc.toro.abuelo_p}}</div>
+        <div class="pedigri_padres">{{tc.toro.padre}}</div>
+        <div class="pedigri_abuelos">{{tc.toro.abuela_p}}</div>
+      </div>
+      <div class="contenedor_padres_pedigri_linea2">
+        <div class="pedigri_abuelos">{{tc.toro.abuelo_m}}</div>
+        <div class="pedigri_padres">{{tc.toro.madre}}</div>
+        <div class="pedigri_abuelos">{{tc.toro.abuela_m}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="contenedor_datospropios">
+    <div class="contenedor_datospropios_titulos">
+      <div class="datospropios_titulos">HBA</div>
+      <div class="datospropios_separadortitulos"></div>
+      <div class="datospropios_titulos">NACI&Oacute;</div>
+      <div class="datospropios_separadortitulos"></div>
+      <div class="datospropios_titulos">PN</div>
+      <div class="datospropios_separadortitulos"></div>
+      <div class="datospropios_titulos">PD</div>
+      <div class="datospropios_separadortitulos"></div>
+      <div class="datospropios_titulos">PF</div>
+      <div class="datospropios_separadortitulos"></div>
+      <div class="datospropios_titulos">FRAME</div>
+      <div class="datospropios_separadortitulos"></div>
+      <div class="datospropios_titulos">CEcm</div>
+    </div>
+    <div class="contenedor_datospropios_datos">
+      <div class="datospropios_datos_hba">{{tc.toro.hba}}</div>
+      <div class="datospropios_separador_datos1"></div>
+      <div class="datospropios_datos_hba">{{tc.toro.nacio}}</div>
+      <div class="datospropios_separador_datos2"></div>
+      <div class="datospropios_datos_hba">{{tc.toro.PN}}</div>
+      <div class="datospropios_separador_datos3"></div>
+      <div class="datospropios_datos_hba">{{tc.toro.PD}}</div>
+      <div class="datospropios_separador_datos4"></div>
+      <div class="datospropios_datos_hba">{{tc.toro.PDF}}</div>
+      <div class="datospropios_separador_datos5"></div>
+      <div class="datospropios_datos_hba">{{tc.toro.FRAME}}</div>
+      <div class="datospropios_separador_datos6"></div>
+      <div class="datospropios_datos_hba">{{tc.toro.CE}}</div>
+    </div>
+  </div>
+  <div class="contenedor_comentario" ng-bind-html="tc.toro.texto">
+  	
+  </div>
+</div>
+<div class="contenedor_deps" ng-if="tc.toro.promedio && tc.toro.pruebas">
+  <div class="contenedor_deps_linea1">
+    <div class="deps_fila1">AAA-017</div> <!--que seria ? -->
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas">FP</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas">PN</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas">PD</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas">PF</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas">LECHE</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas">CM</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas">GD</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas">MAR</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas">AOB</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas">CE</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas">DOC</div>
+  </div>
+  <div class="contenedor_deps_linea2">
+    <div class="deps_fila1">DEP</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_destacado">{{tc.toro.pruebas.dep_fp}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.dep_pn}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.dep_pd}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.dep_pf}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.dep_leche}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.dep_cm}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.dep_gd}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.dep_marm}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_destacado">{{tc.toro.pruebas.dep_aob}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.dep_ce}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.dep_doc}}</div>
+  </div>
+  <div class="contenedor_deps_linea2">
+    <div class="deps_fila1">PREC%</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.prec_fp}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.prec_pn}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.prec_pd}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.prec_pf}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.prec_leche}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.prec_cm}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.prec_gd}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.prec_marm}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.prec_aob}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.prec_ce}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.prec_doc}}</div>
+  </div>
+  <div class="contenedor_deps_linea2">
+    <div class="deps_fila1">RANKING</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_destacado">{{tc.toro.pruebas.rk_fp}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.rk_pn}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.rk_pd}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.rk_pf}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.rk_leche}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.rk_cm}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.rk_gd}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.rk_marm}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_destacado">{{tc.toro.pruebas.rk_aob}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.rk_ce}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.pruebas.rk_doc}}</div></div>
+  <div class="contenedor_deps_linea2">
+    <div class="deps_fila1">PROMEDIO</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.promedio.fp}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.promedio.pn}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.promedio.pd}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.promedio.pf}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.promedio.leche}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.promedio.cm}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.promedio.gd}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.promedio.marm}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.promedio.aob}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.promedio.ce}}</div>
+    <div class="deps_separador_columnas"></div>
+    <div class="deps_columnas2">{{tc.toro.promedio.doc}}</div>
+  </div>
+</div>
+<div class="contenedor_volver_descargar">
+  <div class="contenedor_volver_flecha"><span class="contenedor_volver"><img src="imagenes/back.png" width="11" height="20" alt=""/></span></div>
+  <div class="contenedor_volver">
+  	<a href="#" class="linkchico">Volver al listado de toros</a>
+  </div>
+  <div class="contenedor_descargar" ng-if="tc.toro.pdf_file">
+  	<a ng-href="tc.toro.pdf_file" class="linkchico">Descargar ficha</a>
+  </div>
+  <div class="contenedor_descargar_icono" ng-if="tc.toro.pdf_file">
+  	<a ng-href="tc.toro.pdf_file">
+  		<img src="imagenes/acrobat.png" width="29" height="30" alt=""/>
+  	</a>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="js/ng-shadowbox.min.js"></script>
+<script type="text/javascript">
+Shadowbox.init({
+    language: 'en',
+    players:  ['img', 'html', 'iframe', 'qt', 'wmp', 'swf', 'flv']
+});
+</script>
+<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>

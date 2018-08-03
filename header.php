@@ -1,5 +1,5 @@
 <div class="datos_top">
-  <div class="logosemex"><img src="imagenes/logosemex.png" width="172" height="100" alt=""/></div>
+  <div class="logosemex"><img src="imagenes/logosemex.png" alt=""/></div>
   <div class="contenedor_botonera_top">
     <div class="contenedor_boton"><a href="index.php" class="botoneratop">INICIO</a></div>
     <div class="contenedor_espacioboton"></div>
