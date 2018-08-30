@@ -26,7 +26,7 @@
           <div class="toro_iconos" ng-if="tc.toro.maternal == 1" >
             <img  src="imagenes/icono_maternal.png" width="37" height="37" alt=""/>
           </div>
-          <div class="toro_iconos" ng-if="tc.toro.carcasa == 1">
+          <div class="toro_iconos" ng-if="tc.toro.carcaza == 1">
             <img src="imagenes/icono_carcasa.png" width="41" height="37" alt=""/>
           </div>
           <div class="toro_iconos" ng-if="tc.toro.performance == 1">
@@ -130,7 +130,7 @@
       </div>
       <div class="contenedor_deps" ng-if="tc.toro.promedio && tc.toro.pruebas">
         <div class="contenedor_deps_linea1">
-          <div class="deps_fila1">AAA-017</div> <!--que seria ? -->
+          <div class="deps_fila1">{{tc.toro.pruebas.fecha_prueba}}</div> 
           <div class="deps_separador_columnas"></div>
           <div class="deps_columnas">FP</div>
           <div class="deps_separador_columnas"></div>
@@ -245,8 +245,8 @@
           <div ng-class="{'deps_destacado': tc.toro.pruebas.dep_aob_flag == '1', 
                           'deps_columnas2': !tc.toro.pruebas.dep_aob_flag || tc.toro.pruebas.dep_aob_flag == '0'}">{{tc.toro.pruebas.rk_aob}}</div>
           <div class="deps_separador_columnas"></div>
-          <div ng-class="{'deps_destacado': tc.toro.pruebas.dep_rk_flag == '1', 
-                          'deps_columnas2': !tc.toro.pruebas.dep_rk_flag || tc.toro.pruebas.dep_rk_flag == '0'}">{{tc.toro.pruebas.rk_ce}}</div>
+          <div ng-class="{'deps_destacado': tc.toro.pruebas.dep_ce_flag == '1', 
+                          'deps_columnas2': !tc.toro.pruebas.dep_ce_flag || tc.toro.pruebas.dep_ce_flag == '0'}">{{tc.toro.pruebas.rk_ce}}</div>
           <div class="deps_separador_columnas"></div>
           <div ng-class="{'deps_destacado': tc.toro.pruebas.dep_doc_flag == '1', 
                           'deps_columnas2': !tc.toro.pruebas.dep_doc_flag || tc.toro.pruebas.dep_doc_flag == '0'}">{{tc.toro.pruebas.rk_doc}}</div></div>
