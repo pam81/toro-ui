@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* CSS Document */
+.contacto_texto_formulario {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	color: #58595b;
+	float: left;
+	height: 450px;
+	width: 450px;
+	padding-top: 15px;
+	text-align: left;
+	line-height: 22px;
+	padding-left: 15px;
+}
+.contacto_contenedor_formulario {
+	float: left;
+	height: 465px;
+	width: 485px;
+	padding-left: 15px;
+	background-image: url(imagenes/fondo_contacto.jpg);
+	padding-top: 15px;
+}
+.contacto_contenedor_formulario_form {
+	float: left;
+	height: 450px;
+	width: 465px;
+	background-image: url(imagenes/px_fondocontacto.png);
+	background-repeat: repeat;
+}
+.contacto_item_form {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 32px;
+	font-weight: normal;
+	color: #58595b;
+	float: left;
+	height: 38px;
+	width: 163px;
+	text-align: left;
+}
+.contacto_celda_form {
+	float: left;
+	height: 38px;
+	width: 475px;
+}
+.contacto_campo_form {
+	float: left;
+	height: 35px;
+	width: 370px;
+}
+.contacto_campo_form4 {
+	float: left;
+	height: 35px;
+	width: 60px;
+	background-color: #666;
+	text-align: center;
+	padding-left: 15px;
+}
+.contacto_campo_form3 {
+	float: left;
+	height: 80px;
+	width: 390px;
+}
+.contacto_campo_form2 {
+	float: left;
+	height: 120px;
+	width: 370px;
+}
+.contacto_celda2_form {
+	float: left;
+	height: 149px;
+	width: 475px;
+}
+.campo_form2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 25px;
+	font-weight: normal;
+	color: #666;
+	text-decoration: none;
+	background-color: #FFF;
+	float: left;
+	height: 110px;
+	width: 340px;
+}
+.campo_captcha {
+	float: left;
+	height: 28px;
+	width: 314px;
+	border: 1px solid #CCC;
+}
+.campo_form3 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 25px;
+	font-weight: normal;
+	color: #f26522;
+	text-decoration: none;
+	background-color: #FFF;
+	float: left;
+	height: 25px;
+	width: 312px;
+	text-align: center;
+}
+.campo_form {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 25px;
+	font-weight: normal;
+	color: #666;
+	text-decoration: none;
+	background-color: #FFF;
+	float: left;
+	height: 25px;
+	width: 350px;
+}
+.contacto_campoenviar_form {
+	float: left;
+	height: 38px;
+	width: 312px;
+	text-align: right;
+}
+.buttonenviar{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 17px;
+	line-height: 35px;
+	font-weight: normal;
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+	border: 0;
+	padding: 0;
+	background-color: transparent;
+	float: left;
+	width: auto;
+	height: auto;
+	text-align: left;
+}

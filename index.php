@@ -19,8 +19,11 @@
 <div id="wrapperslide">
   <!-- Slideshow 1 -->
   <ul class="rslides" id="slider1">
-      <li><img src="imagenes/slide/banner_carne01.jpg" alt=""></li>
-      <li><img src="imagenes/slide/banner01gde.jpg" alt=""></li>
+      <li><img src="imagenes/slide/01.jpg" alt=""></li>
+      <li><img src="imagenes/slide/02.jpg" alt=""></li>
+      <li><img src="imagenes/slide/03.jpg" alt=""></li>
+      <li><img src="imagenes/slide/04.jpg" alt=""></li>
+      <li><img src="imagenes/slide/05.jpg" alt=""></li>
   </ul>
 </div>
 
@@ -46,30 +49,28 @@
         <div class="index_contenedor_contenido_slide1_foto">
           <img src="imagenes/index_slide1_foto2.jpg" width="560" height="400" alt=""/>
         </div>
-        <div class="index_contenedor_contenido_slide1_titulo">MUNITION</div>
-        <div class="index_contenedor_contenido_slide1_texto">0200HO03859<br />
-          ROBUST x PLANET x SHOTTLE<br />
+        <div class="index_contenedor_contenido_slide1_titulo">PETER</div>
+        <div class="index_contenedor_contenido_slide1_texto">HOARGM264380<br />
+          ALTASPRING x SUPERSIRE<br />
           <br />
-          GLPI +2781<br />
-          PRO$ 1965<br />
-          <br />
-          LECHE 1327<br />
-          GRASA 58<br />
-          PROTEINA 62
+        . Peter es el toro activo Nº1 por GTPI y $MN produciendo semen en Argentina.<br>
+        . Altísimos componentes con desviaciones positivas de grasa y proteína.<br>
+        . Elevados índices para Vida Productiva. Fertilidad de las hijas y Eficiencia en la Alimentación.<br>
+        . Facilidad de parto, estatura moderada y buen sistema mamario.
         </div>
       </div> <!-- index_contenedor_contenido_slide1 leche -->
       <div ng-if="hc.section.carne" class="index_contenedor_contenido_slide1" id="carne">
         <div class="index_contenedor_contenido_slide1_foto">
           <img src="imagenes/index_slide1_foto3.jpg" width="560" height="400" alt=""/>
         </div>
-        <div class="index_contenedor_contenido_slide1_titulo">ENTRADOR</div>
-        <div class="index_contenedor_contenido_slide1_texto">LUQUENSE 1911 DOCTOR 8588<br />
+        <div class="index_contenedor_contenido_slide1_titulo">BENELLI</div>
+        <div class="index_contenedor_contenido_slide1_texto">RED LAZY MC BENELLI 102B<br />
           <br />
-          Campe&oacute;n ternero mayor Palermo 2016.<br />
+          . Cabeza de remate de Lazy MC Angus (U$37.500), G. C. Ternero 2014 en Showdown y Rdo. C. Junior en Crossroads Beef Expo.<br />
           <br />
-          Hijo de Doctor por una donante hija de Daktari por Rosendo.<br />
+          . Un pedigree más que interesante por la solidez y consistencia de su padre y madre.<br />
           <br />
-          Otro destacado toro de bajo peso al nacer de la Caba&ntilde;a Santa Luc&iacute;a.
+          . Excelente color, balanceado entre fenotipo y DEPs con frame moderado.
         </div>
       </div> <!-- index_contenedor_contenido_slide1 carne -->
       <div ng-if="hc.section.video" class="index_contenedor_contenido_slide1" id="video">
@@ -101,7 +102,7 @@
                 </div>
                 <div class="index_contenedor_flipside_back_contenedorlink">
                   <div class="index_contenedor_flipside_back_link1">
-                    <a href="https://issuu.com/semexarg/docs/semex-anuario-leche-2018" target="_blank" class="linkindexflip1">VER ONLINE</a>
+                    <a href="https://issuu.com/semexarg/docs/semex-anuario-leche-2018" class="linkindexflip1">VER ONLINE</a>
                   </div>
                 </div> <!-- index_contenedor_flipside_back_contenedorlink -->
               </div> <!--index_contenedor_flipslide_back-->
@@ -124,7 +125,7 @@
                   <div class="index_contenedor_flipside_back_link1"><a href="pdf/AnuarioBeef2018.pdf" class="linkindexflip1">DESCARGAR</a></div>
                 </div>
                 <div class="index_contenedor_flipside_back_contenedorlink">
-                  <div class="index_contenedor_flipside_back_link1"><a href="https://issuu.com/semexarg/docs/anuario_beef_2018" target="_blank" class="linkindexflip1">VER ONLINE</a></div>
+                  <div class="index_contenedor_flipside_back_link1"><a href="https://issuu.com/semexarg/docs/anuario_beef_2018" class="linkindexflip1">VER ONLINE</a></div>
                 </div>
               </div>
             </div>
@@ -143,7 +144,7 @@
               <div class="index_contenedor_flipslide_back">
                 <div class="index_contenedor_flipside_back_acrobat"><img src="imagenes/acrobat_grande.png" width="103" height="100" alt=""/></div>
                 <div class="index_contenedor_flipside_back_contenedorlink">
-                  <div class="index_contenedor_flipside_back_link1"><a href="pdf/SemexSolutionsbrochureSPlr.pdf" target="_blank" class="linkindexflip1">DESCARGAR</a></div>
+                  <div class="index_contenedor_flipside_back_link1"><a href="pdf/SemexSolutionsbrochureSPlr.pdf" class="linkindexflip1">DESCARGAR</a></div>
                 </div>
               </div>
             </div>
@@ -162,7 +163,7 @@
               <div class="index_contenedor_flipslide_back">
                 <div class="index_contenedor_flipside_back_acrobat"><img src="imagenes/excel_icon.png" width="103" height="100" alt=""/></div>
                 <div class="index_contenedor_flipside_back_contenedorlink">
-                  <div class="index_contenedor_flipside_back_link1"><a href="pdf/2017_10_19_HBA_TOROS_SEMEX.xls" target="_blank" class="linkindexflip1">DESCARGAR</a></div>
+                  <div class="index_contenedor_flipside_back_link1"><a href="pdf/listado_hba.xls" class="linkindexflip1">DESCARGAR</a></div>
                 </div>
               </div>
             </div>

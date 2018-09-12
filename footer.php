@@ -46,30 +46,27 @@
           </div>
         </div>
         <div class="contenedor_botoneravertical1"><strong>Productos</strong><br />
-          <a href="#" class="botonfoot">Leche</a><br />
-          <a href="#" class="botonfoot">Carne</a><br />
+          <a href="leche.php" class="botonfoot">Leche</a><br />
+          <a href="carne.php" class="botonfoot">Carne</a><br />
         <br />
         <strong>Empresa</strong><br />
         <a href="#" class="botonfoot">Acerca de nosotros</a><br />
         <a href="#" class="botonfoot">Historia</a><br />
-        <a href="#" class="botonfoot">Distribuidores </a></div>
+        <a href="equipo.php" class="botonfoot">Distribuidores </a></div>
         <div class="contenedor_botoneravertical1"><strong>Soluciones</strong><br />
-          <a href="#" class="botonfoot">Immunity+</a><br />
-          <a href="#" class="botonfoot">Repromax</a><br />
-          <a href="#" class="botonfoot">Healthsmart</a><br />
-          <a href="#" class="botonfoot">Genomax</a><br />
-          <a href="#" class="botonfoot">Genomax+</a><br />
-          <a href="#" class="botonfoot">Semexx</a><br />
-          <a href="#" class="botonfoot">Repromix</a><br />
-          <a href="#" class="botonfoot">Facilidad de parto</a><br />
-          <a href="#" class="botonfoot">Robot Ready</a><br />
-          <a href="#" class="botonfoot">Show Time</a><br />
-          <a href="#" class="botonfoot">Rojo y blanco</a><br />
-          <a href="#" class="botonfoot">Sin cuernos</a><br />
-          <a href="#" class="botonfoot">A2</a><br />
-          <a href="#" class="botonfoot">GrazingPro</a><br />
-          <a href="#" class="botonfoot">Swissgenetics</a><br />
-        <a href="#" class="botonfoot">River Valley</a></div>
+          <a href="pdf/Immunity.pdf" class="botonfoot">Immunity+</a><br />
+          <a href="pdf/Repromax.pdf" class="botonfoot">Repromax</a><br />
+          <a href="pdf/HealthSmart.pdf" class="botonfoot">Healthsmart</a><br />
+          <a href="pdf/Genomax.pdf" class="botonfoot">Genomax</a><br />
+          <a href="pdf/GenomaxPlus.pdf" class="botonfoot">Genomax+</a><br />
+          <a href="pdf/Semexx.pdf" class="botonfoot">Semexx</a><br />
+          <a href="pdf/CalvingEase.pdf" class="botonfoot">Facilidad de parto</a><br />
+          <a href="pdf/RobotReady.pdf" class="botonfoot">Robot Ready</a><br />
+          <a href="pdf/RedWhite.pdf" class="botonfoot">Rojo y blanco</a><br />
+          <a href="pdf/Polled.pdf" class="botonfoot">Polled</a><br />
+          <a href="pdf/A2A2.pdf" class="botonfoot">A2</a><br />
+          <a href="pdf/GrazingPro.pdf" class="botonfoot">GrazingPro</a><br />
+        </div>
       </div>
   </div>
 </div>
