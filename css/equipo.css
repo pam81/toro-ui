@@ -155,3 +155,29 @@ a.linkvendedor:hover {
 	float: left;
 	padding-top: 12px;
 }
+.equipo_contenedor_datosvendedor2 {
+	width: 245px;
+	height: 63px;
+	float: left;
+}
+.contenedor_todoequipo4 {
+	width: 1000px;
+	height: auto;
+	padding-top: 20px;
+	border-top: 1px dashed #FFFFFF;
+}
+.equipo_contenedor_vendedor2 {
+	width: 333px;
+	height: 90px;
+	float: left;
+}
+.equipo_contenedor_datosvendedor3 {
+	width: 325px;
+	height: 50px;
+	float: left;
+}
+.equipo_contenedor_vendedor3 {
+	width: 333px;
+	height: 65px;
+	float: left;
+}

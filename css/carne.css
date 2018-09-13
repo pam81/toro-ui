@@ -193,3 +193,18 @@ a.carnelinktoro:hover {
 	font-size: 18px;
 	line-height: 30px;
 }
+.leche_contenedor_iframe {
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+#wrapperleche
+  {
+	text-align: left;
+  margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	width: 1173px;
+	height: 870px;
+}

@@ -12,8 +12,11 @@
 <div id="wrapperslide">
   <!-- Slideshow 1 -->
   <ul class="rslides" id="slider1">
-      <li><img src="imagenes/slide/banner_carne01.jpg" alt=""></li>
-      <li><img src="imagenes/slide/banner01gde.jpg" alt=""></li>
+      <li><img src="imagenes/slide/01.jpg" alt=""></li>
+      <li><img src="imagenes/slide/02.jpg" alt=""></li>
+      <li><img src="imagenes/slide/03.jpg" alt=""></li>
+      <li><img src="imagenes/slide/04.jpg" alt=""></li>
+      <li><img src="imagenes/slide/05.jpg" alt=""></li>
     </ul>
 </div>
 <div id="wrappercarne">

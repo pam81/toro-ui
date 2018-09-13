@@ -19,8 +19,11 @@
 <div id="wrapperslide">
   <!-- Slideshow 1 -->
   <ul class="rslides" id="slider1">
-      <li><img src="imagenes/slide/banner_carne01.jpg" alt=""></li>
-      <li><img src="imagenes/slide/banner01gde.jpg" alt=""></li>
+      <li><img src="imagenes/slide/01.jpg" alt=""></li>
+      <li><img src="imagenes/slide/02.jpg" alt=""></li>
+      <li><img src="imagenes/slide/03.jpg" alt=""></li>
+      <li><img src="imagenes/slide/04.jpg" alt=""></li>
+      <li><img src="imagenes/slide/05.jpg" alt=""></li>
   </ul>
 </div>
 
@@ -92,7 +95,7 @@
                 </div>
                 <div class="index_contenedor_flipside_back_contenedorlink">
                   <div class="index_contenedor_flipside_back_link1">
-                    <a href="https://issuu.com/semexarg/docs/semex-anuario-leche-2018" target="_blank" class="linkindexflip1">VER ONLINE</a>
+                    <a href="https://issuu.com/semexarg/docs/semex-anuario-leche-2018" class="linkindexflip1">VER ONLINE</a>
                   </div>
                 </div> <!-- index_contenedor_flipside_back_contenedorlink -->
               </div> <!--index_contenedor_flipslide_back-->
@@ -115,7 +118,7 @@
                   <div class="index_contenedor_flipside_back_link1"><a href="pdf/AnuarioBeef2018.pdf" class="linkindexflip1">DESCARGAR</a></div>
                 </div>
                 <div class="index_contenedor_flipside_back_contenedorlink">
-                  <div class="index_contenedor_flipside_back_link1"><a href="https://issuu.com/semexarg/docs/anuario_beef_2018" target="_blank" class="linkindexflip1">VER ONLINE</a></div>
+                  <div class="index_contenedor_flipside_back_link1"><a href="https://issuu.com/semexarg/docs/anuario_beef_2018" class="linkindexflip1">VER ONLINE</a></div>
                 </div>
               </div>
             </div>
@@ -134,7 +137,7 @@
               <div class="index_contenedor_flipslide_back">
                 <div class="index_contenedor_flipside_back_acrobat"><img src="imagenes/acrobat_grande.png" width="103" height="100" alt=""/></div>
                 <div class="index_contenedor_flipside_back_contenedorlink">
-                  <div class="index_contenedor_flipside_back_link1"><a href="pdf/SemexSolutionsbrochureSPlr.pdf" target="_blank" class="linkindexflip1">DESCARGAR</a></div>
+                  <div class="index_contenedor_flipside_back_link1"><a href="pdf/SemexSolutionsbrochureSPlr.pdf" class="linkindexflip1">DESCARGAR</a></div>
                 </div>
               </div>
             </div>
@@ -153,7 +156,7 @@
               <div class="index_contenedor_flipslide_back">
                 <div class="index_contenedor_flipside_back_acrobat"><img src="imagenes/excel_icon.png" width="103" height="100" alt=""/></div>
                 <div class="index_contenedor_flipside_back_contenedorlink">
-                  <div class="index_contenedor_flipside_back_link1"><a href="pdf/2017_10_19_HBA_TOROS_SEMEX.xls" target="_blank" class="linkindexflip1">DESCARGAR</a></div>
+                  <div class="index_contenedor_flipside_back_link1"><a href="pdf/listado_hba.xls" class="linkindexflip1">DESCARGAR</a></div>
                 </div>
               </div>
             </div>
