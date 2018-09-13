@@ -37,44 +37,35 @@
       </div>
       <div ng-if="hc.section.noticias" class="index_contenedor_contenido_slide1" id="noticias">
         <div class="index_contenedor_contenido_slide1_foto">
-          <img src="imagenes/index_slide1_foto1.jpg" width="560" height="400" alt=""/>
+          <img ng-src="{{hc.novedades.noticia.image}}" width="560" height="400" alt=""/>
         </div>
-        <div class="index_contenedor_contenido_slide1_titulo">CATALOGOS SEMEX BEEF 2018</div>
-        <div class="index_contenedor_contenido_slide1_texto">Llegaron los cat&aacute;logos Semex Beef 2018. Pasalos a buscar por nuestro Stand de la Expo Rual 2018!! No te lo pierdas.</div>
+        <div class="index_contenedor_contenido_slide1_titulo">{{hc.novedades.noticia.title}}</div>
+        <div class="index_contenedor_contenido_slide1_texto" >
+          <div ng-bind-html="hc.novedades.noticia.text"></div>
+        </div>
       </div> <!-- index_contenedor_contenido_slide1 noticias -->
       <div ng-if="hc.section.leche" class="index_contenedor_contenido_slide1" id="leche">
         <div class="index_contenedor_contenido_slide1_foto">
-          <img src="imagenes/index_slide1_foto2.jpg" width="560" height="400" alt=""/>
+          <img ng-src="{{hc.novedades.leche.image}}" width="560" height="400" alt=""/>
         </div>
-        <div class="index_contenedor_contenido_slide1_titulo">MUNITION</div>
-        <div class="index_contenedor_contenido_slide1_texto">0200HO03859<br />
-          ROBUST x PLANET x SHOTTLE<br />
-          <br />
-          GLPI +2781<br />
-          PRO$ 1965<br />
-          <br />
-          LECHE 1327<br />
-          GRASA 58<br />
-          PROTEINA 62
+        <div class="index_contenedor_contenido_slide1_titulo">{{hc.novedades.leche.title}}</div>
+        <div class="index_contenedor_contenido_slide1_texto">
+          <div ng-bind-html="hc.novedades.leche.text"></div>
         </div>
       </div> <!-- index_contenedor_contenido_slide1 leche -->
       <div ng-if="hc.section.carne" class="index_contenedor_contenido_slide1" id="carne">
         <div class="index_contenedor_contenido_slide1_foto">
-          <img src="imagenes/index_slide1_foto3.jpg" width="560" height="400" alt=""/>
+          <img ng-src="{{hc.novedades.carne.image}}" width="560" height="400" alt=""/>
         </div>
-        <div class="index_contenedor_contenido_slide1_titulo">ENTRADOR</div>
-        <div class="index_contenedor_contenido_slide1_texto">LUQUENSE 1911 DOCTOR 8588<br />
-          <br />
-          Campe&oacute;n ternero mayor Palermo 2016.<br />
-          <br />
-          Hijo de Doctor por una donante hija de Daktari por Rosendo.<br />
-          <br />
-          Otro destacado toro de bajo peso al nacer de la Caba&ntilde;a Santa Luc&iacute;a.
+        <div class="index_contenedor_contenido_slide1_titulo">{{hc.novedades.carne.title}}</div>
+        <div class="index_contenedor_contenido_slide1_texto">
+          <div ng-bind-html="hc.novedades.carne.text"></div>
         </div>
       </div> <!-- index_contenedor_contenido_slide1 carne -->
       <div ng-if="hc.section.video" class="index_contenedor_contenido_slide1" id="video">
-        <iframe width="940" height="395" src="https://www.youtube.com/embed/QkAiEIPoG7M" 
-          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+         <div ng-if="hc.iframe" ng-bind-html="hc.iframe"></div>
+        <!--<iframe width="940" height="395" src="https://www.youtube.com/embed/QkAiEIPoG7M" 
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
       </div> <!-- index_contenedor_contenido_slide1 video -->
     </div> <!-- index_contenedor_divs -->
 </div> <!-- wrapperindex1 -->

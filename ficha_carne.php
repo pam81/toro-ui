@@ -279,7 +279,7 @@
       <div class="contenedor_volver_descargar">
         <div class="contenedor_volver_flecha"><span class="contenedor_volver"><img src="imagenes/back.png" width="11" height="20" alt=""/></span></div>
         <div class="contenedor_volver">
-          <a href="#" class="linkchico">Volver al listado de toros</a>
+          <a href="carne.php" class="linkchico">Volver al listado de toros</a>
         </div>
         <div class="contenedor_descargar" ng-if="tc.toro.pdf_file">
           <a ng-href="tc.toro.pdf_file" class="linkchico">Descargar ficha</a>

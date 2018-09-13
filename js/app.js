@@ -226,7 +226,7 @@ angular.module('semexApp', ['ngShadowbox','ngSanitize'])
 
     init();
 })
-.controller('HomeCtrl', function (RazaService, CarneService) {
+.controller('HomeCtrl', function (NovedadService,  $sce) {
   var ctrl= this;
   var init = function(){
     ctrl.section = {
@@ -235,6 +235,15 @@ angular.module('semexApp', ['ngShadowbox','ngSanitize'])
       carne: false,
       video: false
     };
+    ctrl.iframe='';
+
+    ctrl.novedades = {
+    	noticia: {},
+    	carne: {},
+    	leche: {},
+    	video: {}
+    }
+    ctrl.getNovedades();
    
   };
 
@@ -245,6 +254,25 @@ angular.module('semexApp', ['ngShadowbox','ngSanitize'])
     ctrl.section.video = false;
     ctrl.section[option]= true;
   };
+
+  this.getNovedades = function(){
+  	NovedadService.getCarne().then(function(response){
+  		ctrl.novedades.carne = response.data[0];
+  	});
+  	NovedadService.getLeche().then(function(response){
+  		ctrl.novedades.leche = response.data[0];
+  	});
+  	NovedadService.getNoticia().then(function(response){
+  		ctrl.novedades.noticia = response.data[0];
+  	});
+  	NovedadService.getVideo().then(function(response){
+  		ctrl.novedades.video = response.data[0];
+  		if (ctrl.novedades.video){
+  			var title = ctrl.novedades.video.text.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
+  			ctrl.iframe= $sce.trustAsHtml(title);
+  		}
+  	});
+  }
   init();
 })
 .service('CarneService',function($http){
@@ -347,6 +375,50 @@ angular.module('semexApp', ['ngShadowbox','ngSanitize'])
       };
 
   return razaService;
+
+})
+.service('NovedadService',function($http){
+	var novedadService = {};
+
+	novedadService.getCarne = function (id) {
+        var url = APIURL+'/api/novedadCarne';
+        var request = {
+          method: 'GET',
+          url: url,
+        };
+
+        return $http(request);
+  	};
+
+ 	novedadService.getLeche = function (id) {
+        var url = APIURL+'/api/novedadLeche';
+        var request = {
+          method: 'GET',
+          url: url,
+        };
+
+        return $http(request);
+  	};
+  	novedadService.getNoticia = function (id) {
+        var url = APIURL+'/api/novedadNoticia';
+        var request = {
+          method: 'GET',
+          url: url,
+        };
+
+        return $http(request);
+  	};
+ 	novedadService.getVideo = function (id) {
+	    var url = APIURL+'/api/novedadVideo';
+	    var request = {
+	      method: 'GET',
+	      url: url,
+	    };
+
+	    return $http(request);
+  	};
+
+  return novedadService;
 
 })
 .service('OrigenService',function($http){
