@@ -95,7 +95,7 @@ function notValidCode()
         * Todos los campos son obligatorios. <br />
         <br />
         <?php if(isset($alerta)) echo $alerta;  ?>
-        <form action="" accept-charset="utf-8" method="post">
+        <form action="enviar.php" accept-charset="utf-8" method="post">
           <input type="hidden" name="csrf" value="<?php echo $_SESSION["token"]; ?>">
           <div class="contacto_campo_form">
             <input name="nombre" type="text" required="required" class="campo_form" placeholder="Nombre completo"/>
