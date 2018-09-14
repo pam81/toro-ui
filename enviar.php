@@ -2,7 +2,7 @@
 session_start();
 $_SESSION["token"] = md5(uniqid(mt_rand(), true));
 require "config.php";
-  ini_set('display_errors',1);  error_reporting(E_ALL);
+  //ini_set('display_errors',1);  error_reporting(E_ALL);
 
   if(!empty($_POST["csrf"]) && !empty($_POST["csrf"]) == $_SESSION["token"]){
       $userIP = $_SERVER["REMOTE_ADDR"];
@@ -28,10 +28,10 @@ require "config.php";
             $mail = new PHPMailer();  
             $mail->IsSMTP();
             $mail->SMTPAuth = true;
-            $mail->SMTPDebug=4;
-            $mail->SMTPSecure = "ssl";
-            $mail->Host = "smtp.semex.com.ar";
-            $mail->Port = 465;
+            //$mail->SMTPDebug=4;
+            $mail->SMTPSecure = "tls";
+            $mail->Host = "smtp.correoseguro.co";
+            $mail->Port = 587;
             $mail->Encoding = '7bit';
             $mail->Username   = "formularioweb@semex.com.ar";
             $mail->Password   = "Semex2018";
@@ -41,14 +41,16 @@ require "config.php";
             $mail->MsgHTML($message);
             $mail->AddAddress("info@estilonetto.com", $receiverName);
     
-            if(!$mail->send()) {
+            /*if(!@$mail->send()) {
               echo '<script>alert("Hubo un error y no hemos podido entregar tu mensaje, 
                       vuelve a intentarlo. ");</script>';
-              //echo "Mailer error:".$mail->ErrorInfo;
+              
               
             } else {
               echo '<script>alert("Hemos recibido tu mensaje, nos pondremos en contacto contigo a la brevedad posible.");</script>';
-            }
+            }*/
+            $result = $mail->Send();
+            $alerta = $result ? '<script>alert("Hemos recibido tu mensaje, nos pondremos en contacto contigo a la brevedad posible.");</script>' : '<script>alert("Hubo un error y no hemos podido entregar tu mensaje, vuelve a intentarlo.");</script>';
 
             session_destroy();
             unset($mail);
