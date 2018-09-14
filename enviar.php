@@ -44,7 +44,7 @@ require "config.php";
             if(!$mail->send()) {
               echo '<script>alert("Hubo un error y no hemos podido entregar tu mensaje, 
                       vuelve a intentarlo. ");</script>';
-              echo "Mailer error:".$mail->ErrorInfo;
+              //echo "Mailer error:".$mail->ErrorInfo;
               
             } else {
               echo '<script>alert("Hemos recibido tu mensaje, nos pondremos en contacto contigo a la brevedad posible.");</script>';

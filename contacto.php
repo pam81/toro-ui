@@ -1,5 +1,6 @@
+<?php require_once ("enviar.php"); ?>
 <!DOCTYPE html>
-<html ng-app="semexApp">
+<html>
 <head>
   <title>SEMEX ARGENTINA</title>
   <?php require_once("meta.html"); ?>
@@ -81,7 +82,7 @@ function notValidCode()
 }
 </script>
 </head>
-<body ng-controller="RazaCtrl as rc">
+<body >
 <div id="wrapper">
   <?php require_once("header.php"); ?>
 </div>
@@ -95,7 +96,7 @@ function notValidCode()
         * Todos los campos son obligatorios. <br />
         <br />
         <?php if(isset($alerta)) echo $alerta;  ?>
-        <form action="enviar.php" accept-charset="utf-8" method="post">
+        <form action="" accept-charset="utf-8" method="post">
           <input type="hidden" name="csrf" value="<?php echo $_SESSION["token"]; ?>">
           <div class="contacto_campo_form">
             <input name="nombre" type="text" required="required" class="campo_form" placeholder="Nombre completo"/>
