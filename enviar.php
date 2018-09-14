@@ -4,7 +4,7 @@ $_SESSION["token"] = md5(uniqid(mt_rand(), true));
 require "config.php";
   ini_set('display_errors',1);  error_reporting(E_ALL);
 
-  //if(!empty($_POST["csrf"]) && !empty($_POST["csrf"]) == $_SESSION["token"]){
+  if(!empty($_POST["csrf"]) && !empty($_POST["csrf"]) == $_SESSION["token"]){
       $userIP = $_SERVER["REMOTE_ADDR"];
       $recaptchaResponse = $_POST['g-recaptcha-response'];
       $secretKey = "6LeL8G8UAAAAAM2QLrnVczBooKjAkrkDmXvDWenV";
@@ -55,6 +55,6 @@ require "config.php";
         }
       }
 
-  //}
+  }
 
 ?>
